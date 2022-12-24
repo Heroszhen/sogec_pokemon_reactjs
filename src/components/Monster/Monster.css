@@ -1,0 +1,22 @@
+#monster .info {
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+#monster .info .label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#monster img {
+    border: 1px solid black;
+}
+
+#monster #list-types {
+    display: flex;
+}
+
+#monster #list-types article {
+    margin-right: 10px;
+}

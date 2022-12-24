@@ -1,0 +1,77 @@
+#home {
+    padding: 5px;
+}
+
+#list-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+#list-items>div {
+    width: 23%;
+    margin-bottom: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.zcard {
+    position: relative;
+    height: 100%;
+}
+
+.zcard>div {
+    border-radius: 10px;
+}
+
+.zcard>.front {
+    /* transform: perspective(400px) rotateY(0deg); */
+    backface-visibility: hidden;
+    transition: transform 0.7s;
+    background-color: gainsboro;
+}
+
+.zcard>.back {
+    position: absolute;
+    transform: perspective(400px) rotateY(180deg);
+    background: rgb(0, 0, 0);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: transform 0.7s;
+    font-size: 30px;
+}
+
+.zcard:hover>.front {
+    transform: perspective(400px) rotateY(-180deg);
+}
+
+.zcard:hover>.back {
+    transform: perspective(400px) rotateY(0deg);
+}
+
+.paginationBttns {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.paginationBttns>li {
+    margin-right: 10px;
+}
+
+.paginationBttns>li.paginationActive {
+    color: red;
+}
+
+@media (max-width:767px) {
+    #list-items>div {
+        width: 48%;
+    }
+}
